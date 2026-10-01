@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الصفحة الرئيسية - JERSEY HMADY STORE</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Cairo & Chivo -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Chivo:wght@700;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Cairo', 'sans-serif'],
+            display: ['Chivo', 'Cairo', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              lime: '#ccff00',
+              accent: '#b2e600',
+              dark: '#0b0e14',
+              surface: '#111622',
+              card: '#161d2d',
+              border: '#232b3e',
+            }
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      background-color: #0b0e14;
+      color: #e2e8f0;
+      font-family: 'Cairo', sans-serif;
+    }
+    .neon-glow {
+      box-shadow: 0 0 25px rgba(204, 255, 0, 0.25);
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col bg-[#0b0e14]">
+
+  <!-- شريط الإعلان العلوي -->
+  <div class="bg-gradient-to-r from-emerald-950 via-[#111622] to-emerald-950 border-b border-brand-border py-2 px-4 text-xs font-semibold text-center text-emerald-400 flex items-center justify-center gap-2">
+    <i data-lucide="shield-check" class="w-4 h-4 text-brand-lime"></i>
+    <span>شحن مجاني لكافة المدن الليبية (طرابلس، بنغازي، مصراتة وباقي المدن) للطلبات فوق 250 د.ل | طباعة الاسم والرقم مجاناً مع كل طقم!</span>
+  </div>
+
+  <!-- الترويسة الرئيسية والشعار -->
+  <header class="sticky top-0 z-50 bg-[#111622]/95 backdrop-blur-md border-b border-brand-border px-6 py-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-6">
+      
+      <!-- شعار المتجر -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-full border-2 border-brand-lime bg-black flex items-center justify-center text-brand-lime font-black text-xl font-display group-hover:scale-105 transition-transform shadow-lg shadow-brand-lime/10">
+          JH
+        </div>
+        <div>
+          <span class="text-xl font-black tracking-wider text-white flex items-center gap-1 font-display">
+            JERSEY HMADY
+          </span>
+          <span class="text-xs text-brand-lime font-semibold block">متجر حمادي للأطقم الرياضية الأصلية</span>
+        </div>
+      </a>
+
+      <!-- شريط البحث -->
+      <div class="hidden md:flex flex-1 max-w-lg relative">
+        <input 
+          type="text" 
+          placeholder="ابحث عن ناديك المفضل، منتخبك، أو لاعبك المفضل..." 
+          class="w-full bg-[#161d2d] border border-brand-border rounded-xl py-2.5 pr-11 pl-4 text-sm text-gray-200 placeholder-gray-500 focus:outline-none focus:border-brand-lime transition-colors"
+        >
+        <i data-lucide="search" class="w-5 h-5 text-gray-400 absolute right-3.5 top-3"></i>
+      </div>
+
+      <!-- الإجراءات والعملة -->
+      <div class="flex items-center gap-4">
+        <!-- وسام العملة بالدينار الليبي -->
+        <div class="hidden sm:flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#161d2d] border border-brand-border text-xs font-bold text-gray-300">
+          <span class="text-brand-lime">🇱🇾</span>
+          <span>LYD / د.ل</span>
+        </div>
+
+        <!-- أيقونة السلة -->
+        <a href="#cart" class="relative p-2.5 rounded-xl bg-[#161d2d] border border-brand-border text-gray-200 hover:text-brand-lime hover:border-brand-lime transition-all">
+          <i data-lucide="shopping-bag" class="w-5 h-5"></i>
+          <span class="absolute -top-1.5 -left-1.5 w-5 h-5 rounded-full bg-brand-lime text-black font-extrabold text-xs flex items-center justify-center">
+            3
+          </span>
+        </a>
+
+        <!-- زر تخصيص الطباعة -->
+        <a href="#custom-print" class="hidden lg:flex items-center gap-2 bg-brand-lime text-black px-4 py-2 rounded-xl font-bold text-sm hover:bg-brand-accent transition-colors shadow-md">
+          <i data-lucide="printer" class="w-4 h-4"></i>
+          <span>طباعة الاسم والرقم</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- قائمة التصنيفات -->
+    <nav class="max-w-7xl mx-auto flex items-center justify-center gap-8 pt-3 mt-3 border-t border-brand-border/60 text-sm font-semibold text-gray-400">
+      <a href="#" class="text-brand-lime border-b-2 border-brand-lime pb-1">الرئيسية</a>
+      <a href="#" class="hover:text-white transition-colors">أطقم الأندية 24/25</a>
+      <a href="#" class="hover:text-white transition-colors">أطقم المنتخبات</a>
+      <a href="#" class="hover:text-white transition-colors">أطقم كلاسيكية وتاريخية</a>
+      <a href="#" class="hover:text-white transition-colors">نسخ اللاعبين (Player Issue)</a>
+      <a href="#" class="text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1">
+        <i data-lucide="flame" class="w-4 h-4"></i>
+        <span>التخفيضات الكبرى</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- القسم البطولي (Hero Section) -->
+  <section class="relative overflow-hidden py-16 px-6 border-b border-brand-border bg-gradient-to-b from-[#111622] via-[#0b0e14] to-[#0b0e14]">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-7 space-y-6 text-right">
+        <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand-lime/10 border border-brand-lime/30 text-brand-lime text-xs font-bold">
+          <span class="w-2 h-2 rounded-full bg-brand-lime animate-pulse"></span>
+          <span>تشكيلة الموسم الجديد 2024 / 2025 متوفرة الآن في ليبيا</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-6xl font-black text-white leading-tight font-display">
+          ارتدِ شغفك الرياضي.<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-lime to-emerald-400">
+            أطقم الملاعب الرسمية
+          </span><br>
+          بأعلى معايير الدقة والاحتراف.
+        </h1>
+
+        <p class="text-gray-400 text-base sm:text-lg max-w-2xl leading-relaxed">
+          نقدم لك تجربة اقتناء قمصان كرة القدم التاريخية والحديثة بنسخ اللاعبين الأصلية وخامات شبكية دقيقة تسمح بالتنفس مع الطباعة الحرارية المعتمدة بالأرقام والشعارات الأصلية بالدينار الليبي.
+        </p>
+
+        <div class="flex flex-wrap gap-4 pt-2">
+          <a href="#catalog" class="bg-brand-lime text-black hover:bg-brand-accent px-8 py-3.5 rounded-xl font-black text-base transition-all transform hover:-translate-y-0.5 neon-glow flex items-center gap-2">
+            <span>تسوق أحدث الأطقم</span>
+            <i data-lucide="arrow-left" class="w-5 h-5"></i>
+          </a>
+          <a href="#custom-print" class="bg-[#161d2d] hover:bg-[#1f283d] text-white border border-brand-border px-8 py-3.5 rounded-xl font-bold text-base transition-all flex items-center gap-2">
+            <i data-lucide="edit-3" class="w-5 h-5 text-brand-lime"></i>
+            <span>خصّص قميصك المفضل</span>
+          </a>
+        </div>
+
+        <!-- مميزات الثقة السريعة -->
+        <div class="grid grid-cols-3 gap-4 pt-8 border-t border-brand-border/60 max-w-xl">
+          <div class="flex items-center gap-3">
+            <i data-lucide="check-circle-2" class="w-5 h-5 text-brand-lime"></i>
+            <span class="text-xs text-gray-300 font-semibold">خامة أصلية 1:1 مطابقة تماماً</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="truck" class="w-5 h-5 text-brand-lime"></i>
+            <span class="text-xs text-gray-300 font-semibold">توصيل سريع لكافة المدن</span>
+          </div>
+          <div class="flex items-center gap-3">
+            <i data-lucide="printer" class="w-5 h-5 text-brand-lime"></i>
+            <span class="text-xs text-gray-300 font-semibold">طباعة حرارية بأرقام وبادجات أصلية</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- بطاقة العرض البصري -->
+      <div class="lg:col-span-5 relative">
+        <div class="relative rounded-3xl bg-gradient-to-tr from-[#161d2d] to-[#1e273a] p-6 border border-brand-border/80 shadow-2xl">
+          <div class="aspect-square rounded-2xl bg-[#0b0e14] border border-brand-border overflow-hidden relative flex items-center justify-center group">
+            <div class="text-center p-8 space-y-4">
+              <div class="w-24 h-24 mx-auto rounded-full bg-brand-lime/10 border-2 border-brand-lime flex items-center justify-center text-brand-lime text-3xl font-black">
+                10
+              </div>
+              <h3 class="text-2xl font-black text-white">JERSEY HMADY</h3>
+              <p class="text-xs text-gray-400">نسخ اللاعبين الرسمية • شارات البطولات الأصلية</p>
+              <span class="inline-block bg-brand-lime text-black font-black text-xs px-3 py-1 rounded-md">
+                عرض الموسم: طباعة مجانية
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- كتالوج المنتجات المميزة بالدينار الليبي -->
+  <section id="catalog" class="py-16 px-6 max-w-7xl mx-auto w-full">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+      <div>
+        <div class="flex items-center gap-2 text-brand-lime font-bold text-sm mb-1">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>الأكثر طلباً هذا الأسبوع</span>
+        </div>
+        <h2 class="text-3xl font-black text-white">أطقم الأندية الكبرى بالدينار الليبي</h2>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-xs text-gray-400">التوصيل لجميع المدن الليبية خلال 24 - 48 ساعة</span>
+      </div>
+    </div>
+
+    <!-- شبكة المنتجات -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- قميص 1: ريال مدريد -->
+      <div class="bg-[#111622] rounded-2xl border border-brand-border hover:border-brand-lime/60 transition-all p-5 flex flex-col justify-between group">
+        <div>
+          <div class="relative aspect-square rounded-xl bg-[#161d2d] border border-brand-border/60 overflow-hidden flex items-center justify-center mb-4">
+            <span class="absolute top-2.5 right-2.5 bg-rose-600 text-white text-[11px] font-black px-2 py-0.5 rounded">
+              خصم 20%
+            </span>
+            <span class="absolute top-2.5 left-2.5 bg-[#0b0e14]/80 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded">
+              نسخة اللاعبين
+            </span>
+            <i data-lucide="shirt" class="w-20 h-20 text-gray-600 group-hover:text-brand-lime group-hover:scale-110 transition-all"></i>
+          </div>
+          <p class="text-xs text-gray-400 font-semibold">ريال مدريد • الأساسي 24/25</p>
+          <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-lime transition-colors">
+            طقم ريال مدريد الأساسي 24/25
+          </h3>
+          <p class="text-xs text-gray-400 mt-1">خامة مسامية بنفثة الكلاسيك الفاخر مع شعار الأبطال 15</p>
+        </div>
+
+        <div class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 line-through block">240 د.ل</span>
+            <span class="text-2xl font-black text-brand-lime">190 <span class="text-sm font-bold text-gray-300">د.ل</span></span>
+          </div>
+          <button class="bg-brand-lime hover:bg-brand-accent text-black p-3 rounded-xl transition-colors font-bold flex items-center gap-1.5 shadow-md">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span class="text-xs">إضافة</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- قميص 2: الهلال السعودي -->
+      <div class="bg-[#111622] rounded-2xl border border-brand-border hover:border-brand-lime/60 transition-all p-5 flex flex-col justify-between group">
+        <div>
+          <div class="relative aspect-square rounded-xl bg-[#161d2d] border border-brand-border/60 overflow-hidden flex items-center justify-center mb-4">
+            <span class="absolute top-2.5 right-2.5 bg-amber-500 text-black text-[11px] font-black px-2 py-0.5 rounded">
+              أعلى تقييماً
+            </span>
+            <span class="absolute top-2.5 left-2.5 bg-[#0b0e14]/80 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded">
+              نسخة مباريات
+            </span>
+            <i data-lucide="shirt" class="w-20 h-20 text-gray-600 group-hover:text-blue-400 group-hover:scale-110 transition-all"></i>
+          </div>
+          <p class="text-xs text-gray-400 font-semibold">الهلال السعودي • الطقم الأساسي</p>
+          <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-lime transition-colors">
+            طقم الهلال الأزرق 24/25
+          </h3>
+          <p class="text-xs text-gray-400 mt-1">نسخة الزعيم الرسمية بخط الدوري السعودي المعتمد</p>
+        </div>
+
+        <div class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 line-through block">250 د.ل</span>
+            <span class="text-2xl font-black text-brand-lime">200 <span class="text-sm font-bold text-gray-300">د.ل</span></span>
+          </div>
+          <button class="bg-brand-lime hover:bg-brand-accent text-black p-3 rounded-xl transition-colors font-bold flex items-center gap-1.5 shadow-md">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span class="text-xs">إضافة</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- قميص 3: مانشستر سيتي -->
+      <div class="bg-[#111622] rounded-2xl border border-brand-border hover:border-brand-lime/60 transition-all p-5 flex flex-col justify-between group">
+        <div>
+          <div class="relative aspect-square rounded-xl bg-[#161d2d] border border-brand-border/60 overflow-hidden flex items-center justify-center mb-4">
+            <span class="absolute top-2.5 left-2.5 bg-[#0b0e14]/80 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded">
+              نسخة جماهير
+            </span>
+            <i data-lucide="shirt" class="w-20 h-20 text-gray-600 group-hover:text-cyan-400 group-hover:scale-110 transition-all"></i>
+          </div>
+          <p class="text-xs text-gray-400 font-semibold">مانشستر سيتي • الأساسي</p>
+          <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-lime transition-colors">
+            طقم مانشستر سيتي 24/25
+          </h3>
+          <p class="text-xs text-gray-400 mt-1">بتصميم رمز مانشستر الهاتفي 0161 وبادج أبطال العالم</p>
+        </div>
+
+        <div class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 line-through block">220 د.ل</span>
+            <span class="text-2xl font-black text-brand-lime">180 <span class="text-sm font-bold text-gray-300">د.ل</span></span>
+          </div>
+          <button class="bg-brand-lime hover:bg-brand-accent text-black p-3 rounded-xl transition-colors font-bold flex items-center gap-1.5 shadow-md">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span class="text-xs">إضافة</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- قميص 4: أرسنال -->
+      <div class="bg-[#111622] rounded-2xl border border-brand-border hover:border-brand-lime/60 transition-all p-5 flex flex-col justify-between group">
+        <div>
+          <div class="relative aspect-square rounded-xl bg-[#161d2d] border border-brand-border/60 overflow-hidden flex items-center justify-center mb-4">
+            <span class="absolute top-2.5 right-2.5 bg-rose-600 text-white text-[11px] font-black px-2 py-0.5 rounded">
+              خصم 15%
+            </span>
+            <span class="absolute top-2.5 left-2.5 bg-[#0b0e14]/80 text-gray-300 text-[10px] font-bold px-2 py-0.5 rounded">
+              نسخة لاعبين
+            </span>
+            <i data-lucide="shirt" class="w-20 h-20 text-gray-600 group-hover:text-red-400 group-hover:scale-110 transition-all"></i>
+          </div>
+          <p class="text-xs text-gray-400 font-semibold">أرسنال • المدفعجية الأساسي</p>
+          <h3 class="text-lg font-bold text-white mt-1 group-hover:text-brand-lime transition-colors">
+            طقم أرسنال الأساسي 24/25
+          </h3>
+          <p class="text-xs text-gray-400 mt-1">مزيّن بشعار المدفع الكلاسيكي البسيط مع تقنية تهوية متطورة</p>
+        </div>
+
+        <div class="pt-5 mt-5 border-t border-brand-border/60 flex items-center justify-between">
+          <div>
+            <span class="text-xs text-gray-500 line-through block">230 د.ل</span>
+            <span class="text-2xl font-black text-brand-lime">185 <span class="text-sm font-bold text-gray-300">د.ل</span></span>
+          </div>
+          <button class="bg-brand-lime hover:bg-brand-accent text-black p-3 rounded-xl transition-colors font-bold flex items-center gap-1.5 shadow-md">
+            <i data-lucide="plus" class="w-4 h-4"></i>
+            <span class="text-xs">إضافة</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- خدمات التوصيل وبوابات الدفع الليبية -->
+  <section class="border-y border-brand-border bg-[#111622]/50 py-12 px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-center md:text-right">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+          <i data-lucide="truck" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white text-base">توصيل سريع ومؤمن</h4>
+          <p class="text-xs text-gray-400 mt-1">توصيل لباب بيتك خلال 24-48 ساعة لطرابلس، بنغازي، مصراتة، والزاوية وكافة المدن.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+          <i data-lucide="shield-check" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white text-base">ضمان جودة الخامات 100%</h4>
+          <p class="text-xs text-gray-400 mt-1">خامات رياضية متينة مقاومة لتغير اللون والانكماش مع الغسيل المتكرر.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+          <i data-lucide="refresh-cw" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white text-base">استبدال واسترجاع 14 يوماً</h4>
+          <p class="text-xs text-gray-400 mt-1">إذا لم يناسبك المقاس، استبدله بكل سهولة ومجاناً ودون أي تعقيدات.</p>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 rounded-xl bg-brand-lime/10 border border-brand-lime/30 flex items-center justify-center text-brand-lime shrink-0">
+          <i data-lucide="credit-card" class="w-6 h-6"></i>
+        </div>
+        <div>
+          <h4 class="font-bold text-white text-base">بوابات دفع ليبية محلية</h4>
+          <p class="text-xs text-gray-400 mt-1">دعم سداد (Sadad)، إدفع لي (Edfali)، بطاقات تداول، والدفع عند الاستلام (COD).</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- تذييل الصفحة (Footer) -->
+  <footer class="bg-[#0b0e14] border-t border-brand-border pt-16 pb-12 px-6 text-gray-400 text-sm">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-brand-border/60">
+      
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full border border-brand-lime bg-black flex items-center justify-center text-brand-lime font-black font-display">
+            JH
+          </div>
+          <span class="text-lg font-black text-white font-display">JERSEY HMADY</span>
+        </div>
+        <p class="text-xs text-gray-400 leading-relaxed">
+          الوجهة الأولى لعشاق كرة القدم والقمصان التاريخية والنادرة في ليبيا. خامات أصلية، وطباعة حرارية بأرقام وخطوط البطولات الرسمية لجميع أنديتك المفضلة.
+        </p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-white font-bold text-sm">الدوريات الكبرى</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#" class="hover:text-brand-lime transition-colors">الدوري الإنجليزي الممتاز</a></li>
+          <li><a href="#" class="hover:text-brand-lime transition-colors">الدوري الإسباني (لا ليغا)</a></li>
+          <li><a href="#" class="hover:text-brand-lime transition-colors">الدوري الإيطالي (سيريا أ)</a></li>
+          <li><a href="#" class="hover:text-brand-lime transition-colors">دوري أبطال أوروبا</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-white font-bold text-sm">خدمة العملاء والضمان</h4>
+        <ul class="space-y-2 text-xs">
+          <li><a href="#" class="hover:text-brand-lime transition-colors">سياسة الاستبدال والاسترجاع</a></li>
+          <li><a href="#" class="hover:text-brand-lime transition-colors">دليل المقاسات التفصيلي للمباريات</a></li>
+          <li><a href="#" class="hover:text-brand-lime transition-colors">تتبع الشحنة والطلبات</a></li>
+          <li><a href="#" class="hover:text-brand-lime transition-colors">العناية بالقميص والغسيل الرياضي</a></li>
+        </ul>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="text-white font-bold text-sm">طرق الدفع المعتمدة في ليبيا</h4>
+        <div class="flex flex-wrap gap-2 pt-1">
+          <span class="px-2.5 py-1 rounded bg-[#161d2d] border border-brand-border text-xs text-gray-300 font-bold">سداد Sadad</span>
+          <span class="px-2.5 py-1 rounded bg-[#161d2d] border border-brand-border text-xs text-gray-300 font-bold">إدفع لي Edfali</span>
+          <span class="px-2.5 py-1 rounded bg-[#161d2d] border border-brand-border text-xs text-gray-300 font-bold">تداول / بطاقة مصرفية</span>
+          <span class="px-2.5 py-1 rounded bg-[#161d2d] border border-brand-border text-xs text-gray-300 font-bold">الدفع عند الاستلام</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500 gap-4">
+      <p>© 2025 متجر حمادي للأطقم الرياضية (JERSEY HMADY STORE). جميع الحقوق محفوظة.</p>
+      <div class="flex items-center gap-6">
+        <a href="#" class="hover:underline">الشروط والأحكام</a>
+        <a href="#" class="hover:underline">سياسة الخصوصية</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- تفعيل الأيقونات -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
